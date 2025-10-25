@@ -14,7 +14,7 @@ device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 num_classes = 2
 class_names = ["Violence", "Non Violence"]
 model = custome_X3D(num_classes)
-model_path = "C:/Users/Admin/Downloads/Violence-detection-using-X3D-main/x3d_tkinter/best_model.pth"
+model_path = "/model.pth"
 model = load_model(model, model_path, device)
 model.eval()
 
@@ -134,3 +134,4 @@ window.mainloop()
 # Release the webcam after the app closes
 cap.release()
 cv2.destroyAllWindows()
+
